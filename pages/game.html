@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo-Ken-Po</title>
+    <!--=========================== GOOGLE FONTS ===========================-->
+    <!-- Montserrat e Finger Paint Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--=========================== FAVICON ===========================-->
+    <link rel="shortcut icon" href="../img/pedra.png" type="image/x-icon">
+    <!--=========================== EXTERNAL CSS ===========================-->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <section class="game-section section" id="section">
+        <h1 class="game-title" id="game-title">Jo-Ken-Po</h1>
+        <div class="game-container container">
+            <div class="gameboard">
+                <div class="scoreboard">
+                    <span class="user-left users" id="player">You</span>
+                    <span class="score-left score" id="score-l">0</span>
+                </div>
+                <div class="game-options game-option-left">
+                    <img src="../img/pedra.png" class="option option-left option-hover " id="option-1-l"
+                        onclick="ifClicked(0)">
+                    <img src="../img/papel.png" class="option option-left option-hover " id="option-2-l"
+                        onclick="ifClicked(1)">
+                    <img src=" ../img/tesoura.png" class="option option-left option-hover " id="option-3-l"
+                        onclick="ifClicked(2)">
+                </div>
+            </div>
+            <h2 class=" versus">VS</h2>
+            <div class="gameboard">
+                <div class="scoreboard">
+                    <span class="score-right score" id="score-r">0</span>
+                    <span class="user-right users">Opponent</span>
+
+                </div>
+                <div class="game-options game-option-right">
+                    <img src="../img/pedra.png" class="option option-right" id="option-1-r">
+                    <img src="../img/papel.png" class="option option-right" id="option-2-r">
+                    <img src="../img/tesoura.png" class="option option-right" id="option-3-r">
+                </div>
+            </div>
+        </div>
+        <div class="result-container">
+            <h3 class="result" id="result">Result</h3>
+        </div>
+        <div class="buttons">
+            <button class="finish-game btn" id="finish-btn">Finish Game</button>
+            <button class="start-game btn" id="start-btn">Start Again</button>
+        </div>
+    </section>
+
+
+    <!--=========================== EXTERNAL JS ===========================-->
+    <script src="../js/game.js"></script>
+    <!--=========================== Confetti Falling Animation Script ===========================-->
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+</body>
+
+</html>

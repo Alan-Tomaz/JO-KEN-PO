@@ -1,0 +1,311 @@
+/* --=========================== VARIABLES =========================== */
+:root {
+    /* COLORS */
+    --primary-hue: 223;
+
+    --primary-color: hsl(var(--primary-hue), 100%, 25%);
+    --primary-color-alt: hsl(var(--primary-hue), 90%, 40%);
+    --primary-color-lighter: hsl(var(--primary-hue), 90%, 45%);
+    --bg-color: hsl(var(--primary-hue), 100%, 12%);
+    --text-color: hsl(var(--primary-hue), 5%, 85%);
+    --title-color: #fff;
+
+    /* FONT SIZE */
+    --h1-font: 5rem;
+    --h2-font: 3rem;
+    --h3-font: 1.4rem;
+    --text-font: 1rem;
+
+    /* FONT WEIGHT */
+    --font-normal: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* TRANSITION */
+    --transition: all ease .3s;
+}
+
+/*================ VARIABLES FOR SMALL DEVICES =============== */
+@media screen and (max-width: 600px) {
+    :root {
+        --h1-font: 3rem;
+    }
+
+}
+
+/* --=========================== GENERAL STYLE =========================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    transition: 1s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--title-color);
+    font-size: var(--h1-font);
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Finger Paint', sans-serif;
+    color: var(--title-color);
+    font-size: var(--h2-font);
+    text-align: center;
+}
+
+h3 {
+    color: var(--title-color);
+    font-size: var(--h3-font);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    font-size: var(--font-normal);
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* --=========================== BUTTONS =========================== */
+.btn {
+    width: fit-content;
+    padding: 1rem 1.5rem;
+    font-size: var(--font-normal);
+    color: #fff;
+    background-color: var(--primary-color-alt);
+    border: 0;
+    transition: var(--transition);
+    font-weight: var(--font-semi-bold);
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-lighter);
+    cursor: pointer;
+}
+
+/* --=========================== ELEMENTS STYLES =========================== */
+
+/* --=========================== INITIAL PAGE =========================== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+input {
+    padding: .8rem 1.2rem;
+    border-radius: .3rem;
+    min-width: 280px;
+    border: 0;
+    outline: 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+input:focus {
+    outline: 2px solid var(--primary-color);
+
+}
+
+.initial-container {
+    height: 35vh;
+}
+
+
+
+/* Game Page */
+
+.game-section {
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+}
+
+.game-title {
+    font-size: 8rem;
+    transition: 1s;
+
+}
+
+.gameboard {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.user-left,
+.score-right {
+    text-align: left;
+}
+
+.users {
+    font-size: var(--h3-font);
+    color: white;
+    font-weight: var(--font-bold);
+}
+
+.score {
+    font-size: var(--h2-font);
+    transition: var(--transition);
+}
+
+.user-right,
+.score-left {
+    text-align: right;
+}
+
+
+.game-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.option {
+    width: 100px;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.option-hover:hover {
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+.option-active {
+    opacity: 1;
+}
+
+
+.option-right {
+    opacity: 0;
+}
+
+.result-container {
+    max-width: 100%;
+    width: fit-content;
+    padding: 1.5rem 3rem;
+    border: 2px solid var(--primary-color-alt);
+    border-radius: .5rem;
+}
+
+.result {
+    transition: var(--transition);
+}
+
+.start-game {
+    display: none;
+}
+
+/* --=========================== MEDIA QUERIES =========================== */
+
+/* FOR MEDIUM DEVICES */
+@media screen and (max-width: 1000px) {
+    .game-title {
+        font-size: 4rem;
+    }
+
+    .game-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* FOR SMALL DEVICES */
+@media screen and (max-width: 600px) {
+
+    .section {
+        padding: 1rem 1rem 1rem;
+    }
+
+    .game-title {
+        font-size: 3rem;
+    }
+
+    .game-options {
+        flex-direction: column;
+    }
+
+
+
+    .gameboard {
+        gap: 1rem;
+    }
+
+    .game-options>img {
+        width: 75px;
+    }
+
+    .game-option-left {
+        align-items: flex-start;
+    }
+
+    .game-option-right {
+        align-items: flex-end;
+    }
+
+    .score {
+        font-size:
+            2.5rem;
+    }
+
+    .users {
+        font-size: 1rem;
+    }
+}
