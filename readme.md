@@ -1,4 +1,4 @@
-# Rich Text Editor
-### Rich Text Editor (WYSIWYG) with HTML, PHP, CSS and JS
+# JO-KEN-PO
+### A Jo Ken Po game created using HTML, CSS and JavaScript
 
-![Rich Text Editor](https://i.imgur.com/ht9vPoV.png)
+![Jo Ken Po](https://i.imgur.com/B1EOqVQ.png)
